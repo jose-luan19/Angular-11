@@ -1,0 +1,72 @@
+version: '3.3'
+
+services:
+  calculadora:
+    build: ./calculadora
+    container_name: calculadora
+    restart: always
+    ports:
+      - 4205:4200
+    volumes:
+      # - ./calculadora:./app
+      - /app/node_modules
+
+  conversor-de-moedas:
+    build: ./conversor-de-moedas
+    container_name: conversor-de-moedas
+    restart: always
+    ports:
+      - 4210:4200
+    volumes:
+      # - ./conversor-de-moedas:./app
+      - /app/node_modules
+
+  dashboard:
+    build: ./dashboard
+    container_name: dashboard
+    restart: always
+    ports:
+      - 4215:4200
+    volumes:
+      # - ./dashboard:./app
+      - /app/node_modules
+
+  gerenciador-de-tarefas:
+    build: ./gerenciador-de-tarefas
+    container_name: gerenciador-de-tarefas
+    restart: always
+    ports:
+      - 4220:4200
+    volumes:
+      # - ./gerenciador-de-tarefas:./app
+      - /app/node_modules
+
+  jogo-da-velha:
+    build: ./jogo-da-velha
+    container_name: jogo-da-velha
+    restart: always
+    ports:
+      - 4225:4200
+    volumes:
+      # - ./jogo-da-velha:./app
+      - /app/node_modules
+
+  ola-mundo:
+    build: ./ola-mundo
+    container_name: ola-mundo
+    restart: always
+    ports:
+      - 4230:4200
+    volumes:
+      # - ./ola-mundo:./app
+      - /app/node_modules
+
+  projeto-final:
+    build: ./projeto-final
+    container_name: projeto-final
+    restart: always
+    ports:
+      - 4235:4200
+    volumes:
+      # - ./projeto-final:./app
+      - /app/node_modules
